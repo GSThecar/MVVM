@@ -28,9 +28,10 @@
 		C090E41F26E658750094CE24 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E41E26E658740094CE24 /* Networking.swift */; };
 		C090E42126E6C1CC0094CE24 /* GithubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */; };
 		C090E42526E6DE1C0094CE24 /* GithubService+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42426E6DE1C0094CE24 /* GithubService+Reactive.swift */; };
-		C090E42826E6E6400094CE24 /* ReactiveBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42726E6E6400094CE24 /* ReactiveBase.swift */; };
+		C090E42826E6E6400094CE24 /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42726E6E6400094CE24 /* ReactiveViewController.swift */; };
 		C090E42D26E731F00094CE24 /* GithubRepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42C26E731F00094CE24 /* GithubRepositoryTableViewCell.swift */; };
 		C090E42F26E732900094CE24 /* TableViewCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42E26E732900094CE24 /* TableViewCellType.swift */; };
+		C090E43226E75A430094CE24 /* ReactiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43126E75A430094CE24 /* ReactiveTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +83,10 @@
 		C090E41E26E658740094CE24 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewModel.swift; sourceTree = "<group>"; };
 		C090E42426E6DE1C0094CE24 /* GithubService+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubService+Reactive.swift"; sourceTree = "<group>"; };
-		C090E42726E6E6400094CE24 /* ReactiveBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveBase.swift; sourceTree = "<group>"; };
+		C090E42726E6E6400094CE24 /* ReactiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
 		C090E42C26E731F00094CE24 /* GithubRepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		C090E42E26E732900094CE24 /* TableViewCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellType.swift; sourceTree = "<group>"; };
+		C090E43126E75A430094CE24 /* ReactiveTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTextField.swift; sourceTree = "<group>"; };
 		E720293772CAA31DEA24ED30 /* Pods-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMTests/Pods-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDF3816DCFC3EBC5DC6B6241 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -272,8 +274,9 @@
 		C090E42626E6E61E0094CE24 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				C090E42726E6E6400094CE24 /* ReactiveBase.swift */,
+				C090E42726E6E6400094CE24 /* ReactiveViewController.swift */,
 				C090E42E26E732900094CE24 /* TableViewCellType.swift */,
+				C090E43126E75A430094CE24 /* ReactiveTextField.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				C0307D3A26DDA112009A2201 /* GithubSetting.swift in Sources */,
 				C0307D3826DD9E18009A2201 /* GithubService.swift in Sources */,
 				C090E42126E6C1CC0094CE24 /* GithubViewModel.swift in Sources */,
+				C090E43226E75A430094CE24 /* ReactiveTextField.swift in Sources */,
 				C090E42D26E731F00094CE24 /* GithubRepositoryTableViewCell.swift in Sources */,
 				C090E41F26E658750094CE24 /* Networking.swift in Sources */,
 				C071587226DA14920038CCC7 /* AppDelegate.swift in Sources */,
@@ -555,7 +559,7 @@
 				C0307D3E26DDB6A5009A2201 /* ServiceError.swift in Sources */,
 				C07158E226DA24770038CCC7 /* ViewType.swift in Sources */,
 				C07158E426DA252C0038CCC7 /* ViewModelType.swift in Sources */,
-				C090E42826E6E6400094CE24 /* ReactiveBase.swift in Sources */,
+				C090E42826E6E6400094CE24 /* ReactiveViewController.swift in Sources */,
 				C0307D3C26DDA897009A2201 /* GithubRepository.swift in Sources */,
 				C071587426DA14920038CCC7 /* SceneDelegate.swift in Sources */,
 				C07158E726DA2AB20038CCC7 /* UIView+Size.swift in Sources */,

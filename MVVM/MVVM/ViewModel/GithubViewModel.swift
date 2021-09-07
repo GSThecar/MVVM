@@ -13,14 +13,18 @@ typealias GithubRepositoriesData = SectionModel<String, GithubRepository>
 
 class GithubViewModel: ViewModelType {
     
+    private var setting: GithubSetting
+    
     init(with service: ReactiveGithubServiceType, setting: GithubSetting) {
         self.service = service
+        self.setting = setting
     }
     
     let service: ReactiveGithubServiceType
     
     struct Input {
-        let viewWillAppear: Driver<Void>
+        let viewWillAppear: Driver<String>
+        let searchEditChanged: Driver<String>
     }
     
     struct Output {
@@ -28,12 +32,15 @@ class GithubViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        let fetchAPI = input
-            .viewWillAppear
+        
+        let fetchAPI =
+            Driver<String>
+            .merge([input.viewWillAppear, input.searchEditChanged])
             .asObservable()
-            .flatMap { [weak self] () -> Observable<ServiceResult<GithubRepositories, ServiceError>> in
+            .flatMap { [weak self] userID -> Observable<ServiceResult<GithubRepositories, ServiceError>> in
                 guard let weakSelf = self else { return Observable.empty() }
-                return weakSelf.service.fetchObservable(setting: GithubSetting())
+                if weakSelf.setting.userID != userID { weakSelf.setting.userID = userID }
+                return weakSelf.service.fetchObservable(setting: weakSelf.setting)
             }
             .share()
             .asDriver(onErrorDriveWith: Driver.empty())
