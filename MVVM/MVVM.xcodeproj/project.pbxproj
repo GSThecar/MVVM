@@ -26,6 +26,9 @@
 		C07158E726DA2AB20038CCC7 /* UIView+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07158E626DA2AB20038CCC7 /* UIView+Size.swift */; };
 		C07158EB26DA2C820038CCC7 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07158EA26DA2C820038CCC7 /* ServiceResult.swift */; };
 		C090E41F26E658750094CE24 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E41E26E658740094CE24 /* Networking.swift */; };
+		C090E42126E6C1CC0094CE24 /* GithubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */; };
+		C090E42526E6DE1C0094CE24 /* GithubService+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42426E6DE1C0094CE24 /* GithubService+Reactive.swift */; };
+		C090E42826E6E6400094CE24 /* ReactiveBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42726E6E6400094CE24 /* ReactiveBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		C07158E626DA2AB20038CCC7 /* UIView+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Size.swift"; sourceTree = "<group>"; };
 		C07158EA26DA2C820038CCC7 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
 		C090E41E26E658740094CE24 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewModel.swift; sourceTree = "<group>"; };
+		C090E42426E6DE1C0094CE24 /* GithubService+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubService+Reactive.swift"; sourceTree = "<group>"; };
+		C090E42726E6E6400094CE24 /* ReactiveBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveBase.swift; sourceTree = "<group>"; };
 		E720293772CAA31DEA24ED30 /* Pods-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMTests/Pods-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDF3816DCFC3EBC5DC6B6241 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +166,7 @@
 				C07158DE26DA24190038CCC7 /* ViewModel */,
 				C07158DF26DA24230038CCC7 /* Service */,
 				C07158EC26DA2EC50038CCC7 /* Resource */,
+				C090E42626E6E61E0094CE24 /* Utility */,
 				C071587126DA14920038CCC7 /* AppDelegate.swift */,
 				C071587326DA14920038CCC7 /* SceneDelegate.swift */,
 			);
@@ -197,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				C07158E826DA2BC50038CCC7 /* Base */,
+				C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 			children = (
 				C07158E926DA2C740038CCC7 /* Base */,
 				C0307D3726DD9E18009A2201 /* GithubService.swift */,
+				C090E42426E6DE1C0094CE24 /* GithubService+Reactive.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -254,6 +263,14 @@
 				C071587F26DA14950038CCC7 /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		C090E42626E6E61E0094CE24 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C090E42726E6E6400094CE24 /* ReactiveBase.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,12 +531,15 @@
 				C071587626DA14920038CCC7 /* ViewController.swift in Sources */,
 				C0307D3A26DDA112009A2201 /* GithubSetting.swift in Sources */,
 				C0307D3826DD9E18009A2201 /* GithubService.swift in Sources */,
+				C090E42126E6C1CC0094CE24 /* GithubViewModel.swift in Sources */,
 				C090E41F26E658750094CE24 /* Networking.swift in Sources */,
 				C071587226DA14920038CCC7 /* AppDelegate.swift in Sources */,
 				C07158EB26DA2C820038CCC7 /* ServiceResult.swift in Sources */,
+				C090E42526E6DE1C0094CE24 /* GithubService+Reactive.swift in Sources */,
 				C0307D3E26DDB6A5009A2201 /* ServiceError.swift in Sources */,
 				C07158E226DA24770038CCC7 /* ViewType.swift in Sources */,
 				C07158E426DA252C0038CCC7 /* ViewModelType.swift in Sources */,
+				C090E42826E6E6400094CE24 /* ReactiveBase.swift in Sources */,
 				C0307D3C26DDA897009A2201 /* GithubRepository.swift in Sources */,
 				C071587426DA14920038CCC7 /* SceneDelegate.swift in Sources */,
 				C07158E726DA2AB20038CCC7 /* UIView+Size.swift in Sources */,
