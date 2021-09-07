@@ -12,7 +12,7 @@ protocol ViewType: AnyObject {
     associatedtype T = ViewModelType
     
     var viewModel: T! { get set }
-    var disposeBag: DisposeBag { get set }
+    var disposeBag: DisposeBag! { get set }
     
     func setUpUI()
     func setUpLayout()
