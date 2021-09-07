@@ -22,17 +22,41 @@ final class GithubRepositoryViewController: UIViewController, ViewType {
         $0.register(cell: GithubRepositoryTableViewCell.self)
     }
     
+    private let searchBar: UISearchBar = UISearchBar()
+    
     func setUpUI() {
         view.backgroundColor = .white
-        view.addSubview(tableView)
+        [searchBar, tableView].forEach { view.addSubview($0) }
     }
     
     func setUpLayout() {
-        tableView.snp.makeConstraints { $0.directionalEdges.equalToSuperview() }
+        searchBar.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.leading.equalTo(searchBar.snp.leading)
+            $0.top.equalTo(searchBar.snp.bottom)
+            $0.trailing.equalTo(searchBar.snp.trailing)
+            $0.bottom.equalToSuperview()
+        }
     }
     
     func setUpBinding() {
-        let output = viewModel.transform(input: .init(viewWillAppear: rx.viewWillAppear.asDriver()))
+        
+        let viewWillAppear = rx.viewWillAppear.asDriver().map { [weak self] in self?.searchBar.text ?? "" }
+        
+        let searchEditChanged = searchBar.searchTextField.rx.editingChanged.asDriver().map { [weak self] in self?.searchBar.text ?? ""}
+        
+        let input =
+            GithubViewModel
+            .Input(
+                viewWillAppear: viewWillAppear,
+                searchEditChanged: searchEditChanged
+                )
+        
+        let output = viewModel.transform(input: input)
         
         let datasource = RxTableViewSectionedReloadDataSource<GithubRepositoriesData> { _, tableview, indexPath, item in
             let cell = tableview.dequeue(GithubRepositoryTableViewCell.self)!

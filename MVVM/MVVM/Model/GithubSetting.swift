@@ -9,6 +9,6 @@ import Foundation
 
 struct GithubSetting {
     let language: String = "swift"
-    let userID: String = "all"
+    var userID: String = ""
     let sortType: String = "stars"
 }

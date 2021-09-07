@@ -18,9 +18,10 @@ extension GithubService: GitHubServiceType {
         
         let baseUrl  = "https://api.github.com/search/repositories?q="
         let language = "language:\(setting.language)"
+        let userID = setting.userID.isEmpty ? setting.userID : "+user:\(setting.userID)"
         let sortType = "&sort=\(setting.sortType)"
         
-        guard let url = URL(string: baseUrl + language + sortType) else {completion(.failure(.invalidURL));  return }
+        guard let url = URL(string: baseUrl + language + userID + sortType) else {completion(.failure(.invalidURL));  return }
         
         let request = request(url: url, method: "GET", header: [:])
         
