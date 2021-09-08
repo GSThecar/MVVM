@@ -32,6 +32,9 @@
 		C090E42D26E731F00094CE24 /* GithubRepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42C26E731F00094CE24 /* GithubRepositoryTableViewCell.swift */; };
 		C090E42F26E732900094CE24 /* TableViewCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42E26E732900094CE24 /* TableViewCellType.swift */; };
 		C090E43226E75A430094CE24 /* ReactiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43126E75A430094CE24 /* ReactiveTextField.swift */; };
+		C090E43426E8809E0094CE24 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43326E8809E0094CE24 /* StringExtension.swift */; };
+		C090E43726E882C10094CE24 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43626E882C10094CE24 /* WebViewViewController.swift */; };
+		C090E43A26E8838C0094CE24 /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43926E8838C0094CE24 /* WebViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		C090E42C26E731F00094CE24 /* GithubRepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		C090E42E26E732900094CE24 /* TableViewCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellType.swift; sourceTree = "<group>"; };
 		C090E43126E75A430094CE24 /* ReactiveTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTextField.swift; sourceTree = "<group>"; };
+		C090E43326E8809E0094CE24 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C090E43626E882C10094CE24 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		C090E43926E8838C0094CE24 /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
 		E720293772CAA31DEA24ED30 /* Pods-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMTests/Pods-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDF3816DCFC3EBC5DC6B6241 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +206,7 @@
 		C07158DD26DA240E0038CCC7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C090E43526E882A10094CE24 /* WebView */,
 				C090E43026E734920094CE24 /* GithubRepository */,
 				C07158E526DA2A910038CCC7 /* Base */,
 			);
@@ -211,6 +218,7 @@
 			children = (
 				C07158E826DA2BC50038CCC7 /* Base */,
 				C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */,
+				C090E43926E8838C0094CE24 /* WebViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 				C090E42726E6E6400094CE24 /* ReactiveViewController.swift */,
 				C090E42E26E732900094CE24 /* TableViewCellType.swift */,
 				C090E43126E75A430094CE24 /* ReactiveTextField.swift */,
+				C090E43326E8809E0094CE24 /* StringExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -288,6 +297,14 @@
 				C090E42C26E731F00094CE24 /* GithubRepositoryTableViewCell.swift */,
 			);
 			path = GithubRepository;
+			sourceTree = "<group>";
+		};
+		C090E43526E882A10094CE24 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C090E43626E882C10094CE24 /* WebViewViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,12 +572,15 @@
 				C071587226DA14920038CCC7 /* AppDelegate.swift in Sources */,
 				C07158EB26DA2C820038CCC7 /* ServiceResult.swift in Sources */,
 				C090E42F26E732900094CE24 /* TableViewCellType.swift in Sources */,
+				C090E43A26E8838C0094CE24 /* WebViewViewModel.swift in Sources */,
+				C090E43726E882C10094CE24 /* WebViewViewController.swift in Sources */,
 				C090E42526E6DE1C0094CE24 /* GithubService+Reactive.swift in Sources */,
 				C0307D3E26DDB6A5009A2201 /* ServiceError.swift in Sources */,
 				C07158E226DA24770038CCC7 /* ViewType.swift in Sources */,
 				C07158E426DA252C0038CCC7 /* ViewModelType.swift in Sources */,
 				C090E42826E6E6400094CE24 /* ReactiveViewController.swift in Sources */,
 				C0307D3C26DDA897009A2201 /* GithubRepository.swift in Sources */,
+				C090E43426E8809E0094CE24 /* StringExtension.swift in Sources */,
 				C071587426DA14920038CCC7 /* SceneDelegate.swift in Sources */,
 				C07158E726DA2AB20038CCC7 /* UIView+Size.swift in Sources */,
 			);

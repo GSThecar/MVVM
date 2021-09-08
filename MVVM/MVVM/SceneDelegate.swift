@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let rootViewController = GithubRepositoryViewController.create(with: GithubViewModel(with: GithubService(), setting: GithubSetting()))
         
-        window?.rootViewController = rootViewController
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 
