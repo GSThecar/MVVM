@@ -25,10 +25,12 @@ class GithubViewModel: ViewModelType {
     struct Input {
         let viewWillAppear: Driver<String>
         let searchEditChanged: Driver<String>
+        let selectedItem: Driver<GithubRepository>
     }
     
     struct Output {
         let repositories: Driver<[GithubRepositoriesData]>
+        let pushWebview: Driver<WebViewViewModel>
     }
     
     func transform(input: Input) -> Output {
@@ -57,7 +59,10 @@ class GithubViewModel: ViewModelType {
             }
         }.asDriver(onErrorDriveWith: Driver.empty())
         
-        return Output(repositories: repositories)
+        let pushWebview = input.selectedItem.compactMap { $0.url.url }.map { WebViewViewModel(with: $0) }.asDriver(onErrorDriveWith: Driver.empty())
+        
+        
+        return Output(repositories: repositories, pushWebview: pushWebview)
     }
     
     

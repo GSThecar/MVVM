@@ -49,12 +49,15 @@ final class GithubRepositoryViewController: UIViewController, ViewType {
         
         let searchEditChanged = searchBar.searchTextField.rx.editingChanged.asDriver().map { [weak self] in self?.searchBar.text ?? ""}
         
+        let selectedItem = tableView.rx.modelSelected(GithubRepositoriesData.Item.self).asDriver()
+        
         let input =
             GithubViewModel
             .Input(
                 viewWillAppear: viewWillAppear,
-                searchEditChanged: searchEditChanged
-                )
+                searchEditChanged: searchEditChanged,
+                selectedItem: selectedItem
+            )
         
         let output = viewModel.transform(input: input)
         
@@ -68,6 +71,19 @@ final class GithubRepositoryViewController: UIViewController, ViewType {
             .repositories
             .drive(tableView.rx.items(dataSource: datasource))
             .disposed(by: disposeBag)
+        
+        output
+            .pushWebview
+            .drive(onNext: { [weak self] webviewViewmodel in
+                guard let weakSelf = self else { return }
+                weakSelf.pushWebviewController(with: webviewViewmodel)
+            })
+            .disposed(by: disposeBag)
+        
+    }
+    
+    private func pushWebviewController(with viewModel: WebViewViewModel) {
+        navigationController?.pushViewController(WebViewViewController.create(with: viewModel), animated: true)
     }
     
 }
