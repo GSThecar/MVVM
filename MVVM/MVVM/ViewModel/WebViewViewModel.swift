@@ -18,10 +18,12 @@ class WebViewViewModel: ViewModelType {
     
     struct Input {
         let viewWillAppear: Driver<Void>
+        let estimatedProgress: Driver<Float>
     }
     
     struct Output {
         let load: Driver<URLRequest>
+        let estimatedProgress: Driver<Float>
     }
     
     
@@ -30,6 +32,6 @@ class WebViewViewModel: ViewModelType {
             guard let weakSelf = self else { return nil }
             return URLRequest(url: weakSelf.url) }
         
-        return Output(load: load)
+        return Output(load: load, estimatedProgress: input.estimatedProgress)
     }
 }

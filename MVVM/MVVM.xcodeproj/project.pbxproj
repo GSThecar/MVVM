@@ -35,6 +35,8 @@
 		C090E43426E8809E0094CE24 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43326E8809E0094CE24 /* StringExtension.swift */; };
 		C090E43726E882C10094CE24 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43626E882C10094CE24 /* WebViewViewController.swift */; };
 		C090E43A26E8838C0094CE24 /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E43926E8838C0094CE24 /* WebViewViewModel.swift */; };
+		C0B37B9A26E893B7007F0815 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B37B9926E893B7007F0815 /* WebView.swift */; };
+		C0B37B9C26E895DC007F0815 /* ReactiveWKWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B37B9B26E895DC007F0815 /* ReactiveWKWebview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		C090E43326E8809E0094CE24 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C090E43626E882C10094CE24 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		C090E43926E8838C0094CE24 /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
+		C0B37B9926E893B7007F0815 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C0B37B9B26E895DC007F0815 /* ReactiveWKWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveWKWebview.swift; sourceTree = "<group>"; };
 		E720293772CAA31DEA24ED30 /* Pods-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMTests/Pods-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDF3816DCFC3EBC5DC6B6241 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -247,6 +251,7 @@
 			children = (
 				C07158E126DA24770038CCC7 /* ViewType.swift */,
 				C07158E626DA2AB20038CCC7 /* UIView+Size.swift */,
+				C0B37B9926E893B7007F0815 /* WebView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				C090E42E26E732900094CE24 /* TableViewCellType.swift */,
 				C090E43126E75A430094CE24 /* ReactiveTextField.swift */,
 				C090E43326E8809E0094CE24 /* StringExtension.swift */,
+				C0B37B9B26E895DC007F0815 /* ReactiveWKWebview.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 			files = (
 				C071587626DA14920038CCC7 /* GithubRepositoryViewController.swift in Sources */,
 				C0307D3A26DDA112009A2201 /* GithubSetting.swift in Sources */,
+				C0B37B9C26E895DC007F0815 /* ReactiveWKWebview.swift in Sources */,
 				C0307D3826DD9E18009A2201 /* GithubService.swift in Sources */,
 				C090E42126E6C1CC0094CE24 /* GithubViewModel.swift in Sources */,
 				C090E43226E75A430094CE24 /* ReactiveTextField.swift in Sources */,
@@ -583,6 +590,7 @@
 				C090E43426E8809E0094CE24 /* StringExtension.swift in Sources */,
 				C071587426DA14920038CCC7 /* SceneDelegate.swift in Sources */,
 				C07158E726DA2AB20038CCC7 /* UIView+Size.swift in Sources */,
+				C0B37B9A26E893B7007F0815 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
