@@ -11,7 +11,8 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-final class GithubRepositoryViewController: UIViewController, ViewType {
+final class GithubRepositoryViewController: ViewController, ViewType {
+    
     typealias T = GithubViewModel
     
     var viewModel: T!
@@ -75,15 +76,13 @@ final class GithubRepositoryViewController: UIViewController, ViewType {
         output
             .pushWebview
             .drive(onNext: { [weak self] webviewViewmodel in
-                guard let weakSelf = self else { return }
-                weakSelf.pushWebviewController(with: webviewViewmodel)
+                guard let weakSelf = self,
+                      let coordinator = weakSelf.coordinator as? TabCoordinator
+                else { return }
+                coordinator.detailRepository(with: webviewViewmodel)
             })
             .disposed(by: disposeBag)
         
-    }
-    
-    private func pushWebviewController(with viewModel: WebViewViewModel) {
-        navigationController?.pushViewController(WebViewViewController.create(with: viewModel), animated: true)
     }
     
 }
