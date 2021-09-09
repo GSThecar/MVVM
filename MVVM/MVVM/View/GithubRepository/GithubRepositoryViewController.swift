@@ -76,8 +76,10 @@ final class GithubRepositoryViewController: ViewController, ViewType {
         output
             .pushWebview
             .drive(onNext: { [weak self] webviewViewmodel in
-                guard let weakSelf = self else { return }
-                weakSelf.coordinator?.detailRepository(with: webviewViewmodel)
+                guard let weakSelf = self,
+                      let coordinator = weakSelf.coordinator as? TabCoordinator
+                else { return }
+                coordinator.detailRepository(with: webviewViewmodel)
             })
             .disposed(by: disposeBag)
         

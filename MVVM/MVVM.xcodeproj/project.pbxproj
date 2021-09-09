@@ -15,6 +15,10 @@
 		C0307D3C26DDA897009A2201 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0307D3B26DDA897009A2201 /* GithubRepository.swift */; };
 		C0307D3E26DDB6A5009A2201 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0307D3D26DDB6A5009A2201 /* ServiceError.swift */; };
 		C056EAF226E9A82C00E226D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056EAF126E9A82C00E226D7 /* ViewController.swift */; };
+		C056EAF426E9D73100E226D7 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056EAF326E9D73100E226D7 /* CoordinatorDelegate.swift */; };
+		C056EAF626E9D7F400E226D7 /* CoordinatorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056EAF526E9D7F400E226D7 /* CoordinatorCategory.swift */; };
+		C056EAF826E9DB2200E226D7 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056EAF726E9DB2200E226D7 /* TabCoordinator.swift */; };
+		C056EAFE26E9DC0C00E226D7 /* TabCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056EAFD26E9DC0C00E226D7 /* TabCategory.swift */; };
 		C071587226DA14920038CCC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C071587126DA14920038CCC7 /* AppDelegate.swift */; };
 		C071587426DA14920038CCC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C071587326DA14920038CCC7 /* SceneDelegate.swift */; };
 		C071587626DA14920038CCC7 /* GithubRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C071587526DA14920038CCC7 /* GithubRepositoryViewController.swift */; };
@@ -72,6 +76,10 @@
 		C0307D3B26DDA897009A2201 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		C0307D3D26DDB6A5009A2201 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		C056EAF126E9A82C00E226D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C056EAF326E9D73100E226D7 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		C056EAF526E9D7F400E226D7 /* CoordinatorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorCategory.swift; sourceTree = "<group>"; };
+		C056EAF726E9DB2200E226D7 /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		C056EAFD26E9DC0C00E226D7 /* TabCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCategory.swift; sourceTree = "<group>"; };
 		C071586E26DA14920038CCC7 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C071587126DA14920038CCC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C071587326DA14920038CCC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +164,23 @@
 				691C37AD6646E4DA6BF73B0C /* Pods_MVVMTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C056EAF926E9DBCD00E226D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C07DCD7E26E8B41600F6FB8E /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C056EAFC26E9DBED00E226D7 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				C056EAF726E9DB2200E226D7 /* TabCoordinator.swift */,
+				C056EAFD26E9DC0C00E226D7 /* TabCategory.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		C071586526DA14920038CCC7 = {
@@ -295,8 +320,9 @@
 		C07DCD7A26E8B34D00F6FB8E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				C056EAFC26E9DBED00E226D7 /* Tab */,
+				C056EAF926E9DBCD00E226D7 /* Main */,
 				C07DCD7D26E8B36C00F6FB8E /* Base */,
-				C07DCD7E26E8B41600F6FB8E /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -305,6 +331,8 @@
 			isa = PBXGroup;
 			children = (
 				C07DCD7B26E8B36700F6FB8E /* CoordinatorType.swift */,
+				C056EAF326E9D73100E226D7 /* CoordinatorDelegate.swift */,
+				C056EAF526E9D7F400E226D7 /* CoordinatorCategory.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -594,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C071587626DA14920038CCC7 /* GithubRepositoryViewController.swift in Sources */,
+				C056EAF826E9DB2200E226D7 /* TabCoordinator.swift in Sources */,
 				C0307D3A26DDA112009A2201 /* GithubSetting.swift in Sources */,
 				C0B37B9C26E895DC007F0815 /* ReactiveWKWebview.swift in Sources */,
 				C0307D3826DD9E18009A2201 /* GithubService.swift in Sources */,
@@ -603,6 +632,7 @@
 				C090E41F26E658750094CE24 /* Networking.swift in Sources */,
 				C056EAF226E9A82C00E226D7 /* ViewController.swift in Sources */,
 				C071587226DA14920038CCC7 /* AppDelegate.swift in Sources */,
+				C056EAFE26E9DC0C00E226D7 /* TabCategory.swift in Sources */,
 				C07158EB26DA2C820038CCC7 /* ServiceResult.swift in Sources */,
 				C090E42F26E732900094CE24 /* TableViewCellType.swift in Sources */,
 				C090E43A26E8838C0094CE24 /* WebViewViewModel.swift in Sources */,
@@ -613,11 +643,13 @@
 				C0307D3E26DDB6A5009A2201 /* ServiceError.swift in Sources */,
 				C07158E226DA24770038CCC7 /* ViewType.swift in Sources */,
 				C07158E426DA252C0038CCC7 /* ViewModelType.swift in Sources */,
+				C056EAF426E9D73100E226D7 /* CoordinatorDelegate.swift in Sources */,
 				C090E42826E6E6400094CE24 /* ReactiveViewController.swift in Sources */,
 				C0307D3C26DDA897009A2201 /* GithubRepository.swift in Sources */,
 				C090E43426E8809E0094CE24 /* StringExtension.swift in Sources */,
 				C071587426DA14920038CCC7 /* SceneDelegate.swift in Sources */,
 				C07158E726DA2AB20038CCC7 /* UIView+Size.swift in Sources */,
+				C056EAF626E9D7F400E226D7 /* CoordinatorCategory.swift in Sources */,
 				C0B37B9A26E893B7007F0815 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
