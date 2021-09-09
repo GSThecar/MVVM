@@ -10,7 +10,7 @@ import WebKit
 import RxSwift
 import RxCocoa
 
-class WebViewViewController: UIViewController, ViewType {
+class WebViewViewController: ViewController, ViewType {
     typealias T = WebViewViewModel
     
     private let progressView: UIProgressView = UIProgressView().then {
@@ -18,10 +18,10 @@ class WebViewViewController: UIViewController, ViewType {
         $0.trackTintColor = .gray
         $0.tintColor = .cyan
     }
+    
     private let webView: WebView = WebView()
     
     var viewModel: T!
-    
     var disposeBag: DisposeBag!
     
     func setUpUI() {

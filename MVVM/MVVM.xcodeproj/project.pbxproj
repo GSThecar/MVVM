@@ -14,6 +14,7 @@
 		C0307D3A26DDA112009A2201 /* GithubSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0307D3926DDA112009A2201 /* GithubSetting.swift */; };
 		C0307D3C26DDA897009A2201 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0307D3B26DDA897009A2201 /* GithubRepository.swift */; };
 		C0307D3E26DDB6A5009A2201 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0307D3D26DDB6A5009A2201 /* ServiceError.swift */; };
+		C056EAF226E9A82C00E226D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056EAF126E9A82C00E226D7 /* ViewController.swift */; };
 		C071587226DA14920038CCC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C071587126DA14920038CCC7 /* AppDelegate.swift */; };
 		C071587426DA14920038CCC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C071587326DA14920038CCC7 /* SceneDelegate.swift */; };
 		C071587626DA14920038CCC7 /* GithubRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C071587526DA14920038CCC7 /* GithubRepositoryViewController.swift */; };
@@ -25,6 +26,8 @@
 		C07158E426DA252C0038CCC7 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07158E326DA252C0038CCC7 /* ViewModelType.swift */; };
 		C07158E726DA2AB20038CCC7 /* UIView+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07158E626DA2AB20038CCC7 /* UIView+Size.swift */; };
 		C07158EB26DA2C820038CCC7 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07158EA26DA2C820038CCC7 /* ServiceResult.swift */; };
+		C07DCD7C26E8B36700F6FB8E /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DCD7B26E8B36700F6FB8E /* CoordinatorType.swift */; };
+		C07DCD7F26E8B41600F6FB8E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DCD7E26E8B41600F6FB8E /* MainCoordinator.swift */; };
 		C090E41F26E658750094CE24 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E41E26E658740094CE24 /* Networking.swift */; };
 		C090E42126E6C1CC0094CE24 /* GithubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */; };
 		C090E42526E6DE1C0094CE24 /* GithubService+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C090E42426E6DE1C0094CE24 /* GithubService+Reactive.swift */; };
@@ -68,6 +71,7 @@
 		C0307D3926DDA112009A2201 /* GithubSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSetting.swift; sourceTree = "<group>"; };
 		C0307D3B26DDA897009A2201 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		C0307D3D26DDB6A5009A2201 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		C056EAF126E9A82C00E226D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C071586E26DA14920038CCC7 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C071587126DA14920038CCC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C071587326DA14920038CCC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		C07158E326DA252C0038CCC7 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		C07158E626DA2AB20038CCC7 /* UIView+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Size.swift"; sourceTree = "<group>"; };
 		C07158EA26DA2C820038CCC7 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
+		C07DCD7B26E8B36700F6FB8E /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		C07DCD7E26E8B41600F6FB8E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		C090E41E26E658740094CE24 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		C090E42026E6C1CC0094CE24 /* GithubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewModel.swift; sourceTree = "<group>"; };
 		C090E42426E6DE1C0094CE24 /* GithubService+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubService+Reactive.swift"; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 		C071587026DA14920038CCC7 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C07DCD7A26E8B34D00F6FB8E /* Coordinator */,
 				C07158E026DA242F0038CCC7 /* Model */,
 				C07158DD26DA240E0038CCC7 /* View */,
 				C07158DE26DA24190038CCC7 /* ViewModel */,
@@ -252,6 +259,7 @@
 				C07158E126DA24770038CCC7 /* ViewType.swift */,
 				C07158E626DA2AB20038CCC7 /* UIView+Size.swift */,
 				C0B37B9926E893B7007F0815 /* WebView.swift */,
+				C056EAF126E9A82C00E226D7 /* ViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -282,6 +290,23 @@
 				C071587F26DA14950038CCC7 /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		C07DCD7A26E8B34D00F6FB8E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C07DCD7D26E8B36C00F6FB8E /* Base */,
+				C07DCD7E26E8B41600F6FB8E /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C07DCD7D26E8B36C00F6FB8E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C07DCD7B26E8B36700F6FB8E /* CoordinatorType.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		C090E42626E6E61E0094CE24 /* Utility */ = {
@@ -576,12 +601,15 @@
 				C090E43226E75A430094CE24 /* ReactiveTextField.swift in Sources */,
 				C090E42D26E731F00094CE24 /* GithubRepositoryTableViewCell.swift in Sources */,
 				C090E41F26E658750094CE24 /* Networking.swift in Sources */,
+				C056EAF226E9A82C00E226D7 /* ViewController.swift in Sources */,
 				C071587226DA14920038CCC7 /* AppDelegate.swift in Sources */,
 				C07158EB26DA2C820038CCC7 /* ServiceResult.swift in Sources */,
 				C090E42F26E732900094CE24 /* TableViewCellType.swift in Sources */,
 				C090E43A26E8838C0094CE24 /* WebViewViewModel.swift in Sources */,
 				C090E43726E882C10094CE24 /* WebViewViewController.swift in Sources */,
+				C07DCD7F26E8B41600F6FB8E /* MainCoordinator.swift in Sources */,
 				C090E42526E6DE1C0094CE24 /* GithubService+Reactive.swift in Sources */,
+				C07DCD7C26E8B36700F6FB8E /* CoordinatorType.swift in Sources */,
 				C0307D3E26DDB6A5009A2201 /* ServiceError.swift in Sources */,
 				C07158E226DA24770038CCC7 /* ViewType.swift in Sources */,
 				C07158E426DA252C0038CCC7 /* ViewModelType.swift in Sources */,
